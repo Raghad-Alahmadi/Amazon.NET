@@ -1,0 +1,53 @@
+﻿@model List<AmazonSa.Models.Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to AmazonSa</h1>
+    <p class="lead">Your one-stop shop for quality products.</p>
+
+    <hr />
+
+    <!-- Featured Products Section -->
+    <h2>Featured Products</h2>
+    <div class="row">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var product in Model) // Use Model instead of injecting ProductController
+            {
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="text-success"><strong>$@product.Price</strong></p>
+                            <a href="/Order/PlaceOrder/@product.ProductId" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No products available.</p>
+        }
+    </div>
+
+    <hr />
+
+    <!-- Quick Links Section -->
+    <div class="mt-4">
+        <h2>Explore More</h2>
+        <a class="btn btn-outline-primary" href="/Orders/1">View Order History</a>
+        <a class="btn btn-outline-secondary" href="/Products">Browse All Products</a>
+    </div>
+
+    <hr />
+
+    <!-- About Section -->
+    <div class="mt-4">
+        <h2>About Us</h2>
+        <p>AmazonSa is a trusted online store offering top-quality products with fast delivery and great customer service.</p>
+    </div>
+</div>
