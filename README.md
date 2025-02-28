@@ -1,34 +1,32 @@
-﻿# Amazon.NET
+# Amazon.NET
 
-#AmazonSa - E-Commerce Web App
-#Overview
-AmazonSa is a simple e-commerce web application built using ASP.NET Core MVC. It allows users to browse products, place orders, and view order history.
+## AmazonSa - E-Commerce Web App
 
-#Features
-Product Listing: Display available products with images, descriptions, and prices.
+### Overview
+AmazonSa is a simple e-commerce web application built using **ASP.NET Core MVC**. It allows users to browse products, place orders, and view order history.
 
-Order Placement: Users can order products and update stock quantities.
+---
 
-Order History: Users can view their past orders.
+### Features
+- **Product Listing**: Display available products with images, descriptions, and prices.
+- **Order Placement**: Users can order products and update stock quantities.
+- **Order History**: Users can view their past orders.
+- **Error Handling**: Proper error messages and pop-ups for stock shortages and invalid inputs.
+- **Real-Time Feedback**: Uses AJAX for better user experience with dynamic updates.
 
-Error Handling: Proper error messages and pop-ups for stock shortages and invalid inputs.
+---
 
-Real-Time Feedback: Uses AJAX for better user experience with dynamic updates.
+### Technologies Used
+- **ASP.NET Core MVC** - Web framework
+- **C#** - Backend programming
+- **Razor Views** - Frontend templating
+- **Bootstrap** - UI styling
+- **Entity Framework Core (Optional)** - For database management
+- **JavaScript & AJAX** - Enhancing real-time interactions
 
-#Technologies Used
-ASP.NET Core MVC - Web framework
+---
 
-C# - Backend programming
-
-Razor Views - Frontend templating
-
-Bootstrap - UI styling
-
-Entity Framework Core (Optional) - For database management
-
-JavaScript & AJAX - Enhancing real-time interactions
-
-#Project Structure
+### Project Structure
 
 AmazonSa/
 │-- Controllers/
